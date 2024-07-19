@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        .btn1{
+        float: right;}
+    </style>
+</head>
+<body>
+<form>
+    <input type="submit" VALUE="Logout"  formaction="{% url 'logout' %}" class="btn1">
+    <br>
+    </form>
+    <div align="center">
+    <h1>Welcome to Sathya technolgies,<br> For Online classes Click the Image<br><br>
+    <a href="https://www.youtube.com/watch?v=TlWmlOtCI_s"><img src="{% static 'images/img1.jpeg' %}"></a></h1>
+        </div>
+</body>
+</html>

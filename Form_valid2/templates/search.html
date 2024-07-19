@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div align="center">
+    <form action="{% url 'element' %}" method="post">
+        {% csrf_token %}
+        <select name="dept" >
+            <option>--select--</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+        </select>
+        <input type="submit" value="Submit">
+    </form>
+</div><br><br><br><br>
+
+{% if res %}
+    <table border="1" align="center">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in res %}
+            <tr>
+                <td>{{ item.Id }}</td>
+                <td>{{ item.Name }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% else %}
+    <p>No data available.</p>
+{% endif %}
+
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form method="post" action="{% url 'save' %}">
+        {% csrf_token %}
+        <table align="center">
+            <tr>
+                <td>Student HT NO :</td>
+                <td><input type="number" name="htno"></td>
+            </tr>
+            <tr>
+                <td> Student Name :</td>
+                <td><input type="text" name="name"></td>
+            </tr>
+            <tr>
+                <td>Subject 1 :</td>
+                <td><input type="number" name="sub1"></td>
+            </tr>
+            <tr>
+                <td>Subject 2:</td>
+                <td><input type="number" name="sub2"></td>
+            </tr>
+            <tr>
+                <td>Subject 3 :</td>
+                <td><input type="number" name="sub3"></td>
+            </tr>
+            <tr>
+
+                <th colspan="2"><input type='submit' value="Insert Details"></th>
+            </tr>
+
+        </table></form>
+</body>
+</html>

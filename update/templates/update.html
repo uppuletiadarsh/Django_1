@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        fieldset{
+            width:200px;
+            height:150px;
+            border-color:blue;
+            border-radius:15px;
+            margin:100px auto;
+
+        }
+    </style>
+</head>
+<body>
+<h1 align="center">Update here...</h1>
+        <legend>
+
+<fieldset>
+
+        <form action="{% url 'updated' res.idno  %}" method="post">
+            {% csrf_token %}
+            <table>
+                <tr>
+                    <th>Eid</th>
+                    <th><input type="number" name="eid" value="{{ res.idno }}"></th>
+                </tr>
+                <tr>
+                    <th>Ename</th>
+                    <th><input type="text" name="ename" value="{{ res.name }}"></th>
+                </tr>
+                <tr>
+                    <th>Sal</th>
+                    <th><input type="number" name="sal" value="{{ res.salary }}"></th>
+                </tr>
+                <tr>
+                    <th colspan="2"><input type="submit" name="Register"></th>
+                </tr>
+            </table>
+
+        </form>
+
+    </fieldset>
+</legend>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        fieldset{
+            width:300px;
+            border-color:red;
+            border-radius:15px;
+            margin:100px auto;
+
+        }
+
+    </style>
+</head>
+<body>
+    <legend>
+    <fieldset>
+
+    <div>
+            <form action="{% url 'details' %}">
+                    <div id="login">
+                    <table align="center">
+
+                    <tr>
+                    <th>Firstname</th>
+                    <th><input type="text" name="fname" ></th>
+                    </tr>
+                    <tr>
+                    <th>Lastname</th>
+                    <th><input type="text" name="lname"></th>
+                    </tr>
+
+                    </table>
+            </div><br>
+
+
+
+                <center><div id="logbtn">&emsp;&emsp;&emsp;<input type="submit" VALUE="fullname"  align="center"  ></center></div>
+        </form>
+    </div>
+    </fieldset>
+    </legend>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="{% url 'updated' det.id %}" method="post">
+    {% csrf_token %}
+    Id   : <input type="number" value="{{ det.id }}" name="id"><br>
+    Name : <input type="text" value="{{ det.name }}" name="name"><br>
+    Dept : <input type="text" value="{{ det.dept }}" name="dept"><br>
+    <button type="submit">Update</button>
+
+
+</form>
+</body>
+</html>

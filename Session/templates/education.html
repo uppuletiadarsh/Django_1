@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+            <form action="{% url 'experience' %}" method="post">
+                {% csrf_token %}
+            <table>
+                <tr>
+                    <th>College Name : </th>
+                    <th><input type="text" name="college"></th>
+                </tr>
+                <tr>
+                    <th>Branch : </th>
+                    <th><input type="text" name="branch"></th>
+                </tr>
+                <tr>
+                    <th>Pin Number : </th>
+                    <th><input type="number" name="pin"></th>
+                </tr>
+                <tr>
+                    <th colspan="2"><input type="submit"></th>
+                </tr>
+            </table>
+        </form>
+</body>
+</html>

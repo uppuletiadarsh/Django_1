@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        <h1>User Details</h1>
+    <table>
+``````````````````````````````````````````````````````````
+        <tbody>
+            {% for detail in details %}
+            <tr>
+                <td>{{ detail.cid }}</td>
+                <td>{{ detail.ename }}</td>
+                <td>{{ detail.email }}</td>
+                <td>{{ detail.psw }}</td>
+                <td>{{ detail.cpsw }}</td>
+                <td>{{ detail.phn }}</td>
+                <td>{{ detail.lang }}</td>
+                <td>{{ detail.state }}</td>
+                <td>{{ detail.gender }}</td>
+
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

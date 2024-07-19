@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        <form method="post">
+            {% csrf_token %}
+            <table align="center">
+                <tr>
+                    <td><label for="id_Id"> Emp Id :</label></td>
+                    <td>{{ form.Id }}</td>
+
+                </tr>
+                <tr>
+                    <td><label for="id_Name"> Emp Name :</label></td>
+                    <td>{{ form.Name }}</td>
+                </tr>
+                <tr>
+                    <td><label for="id_PassWord"> Password :</label></td>
+                    <td>{{ form.PassWord }}</td>
+                </tr>
+                <tr>
+                    <td><label for="id_ConfirmPassword">ConfirmPassword  :</label></td>
+                    <td>{{ form.ConfirmPassword }}</td>
+                </tr>
+                <tr>
+                    <td><label for="id_Dept_Id"> Emp Dept_Id :</label></td>
+                    <td>{{ form.Dept_Id }}</td>
+                </tr>
+                <tr>
+                    <th colspan="2"><button TYPE="submit">Register</button></th>
+                </tr>
+                <tr>
+                    <td>{{ form.PassWord.errors }}</td>
+                </tr>
+
+            </table>
+
+        </form>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #login{
+            font-size:20px;
+
+        }
+        #logbtn{
+        text-align:center;
+
+        }
+
+    </style>
+
+</head>
+<body>
+    <div>
+    <form action="{% url 'reg' %}">
+        <div id="login">
+            <table align="center">
+
+            <tr>
+                <th>Username:</th>
+                <th><input type="text"></th>
+            </tr>
+            <tr>
+                <th> Password:</th>
+                <th><input type="text"></th>
+            </tr>
+
+     </table></div><br>
+    <center><div id="logbtn">&emsp;&emsp;&emsp;<input type="submit" VALUE="login"  align="center"  ></center></div>
+    </form></div>
+    <div>
+        <table align="center">
+            <tr>
+                <th rowspan="2"><h3>New Member :<a href="{% url 'register' %}">Register</a>&emsp;&emsp;&emsp;&emsp;<a href="{% url 'home' %}">Home</a></h3></th>
+
+            </tr>
+        </table>
+    </div>
+
+</body>
+</html>

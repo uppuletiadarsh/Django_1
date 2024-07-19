@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .heading{
+            background-color:orangered;
+            text-shadow:5px 5px 5px yellow;
+            font-size:80px;
+        }
+        .h1{
+
+            text-align:center;
+            font-size:50px;
+            display: inline;
+
+
+        }
+        .h2{
+            display:flex;
+            margin-left: 250px;
+        }
+    </style>
+</head>
+<body>
+    <h1 align="center" class="heading">Sathya Technologies</h1>
+    <hr>
+     <center ><div class="h1">
+        <a href="{% url 'register' %}">Register</a>&emsp;&emsp;&emsp;&emsp;
+        <a href="{% url 'login' %}">Login</a>&emsp;&emsp;&emsp;&emsp;
+        <a href="{% url 'contact' %}">Contact</a></div>
+     </center>
+
+    <hr>
+    <br> <br> <br> <br>
+    <div class="h2"><marquee>
+        <img src="{% static 'images/image1.jpeg' %}" height="300px" width="300px" >&emsp;&emsp;&emsp;&emsp;
+        <img src="{% static 'images/image2.png' %}" height="300px" width="300px">&emsp;&emsp;&emsp;&emsp;
+        <img src="{% static 'images/image3.jpeg' %}" height="300px" width="300px"></marquee>
+    </div>
+
+</body>
+</html>

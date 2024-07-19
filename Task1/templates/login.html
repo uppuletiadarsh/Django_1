@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        fieldset{
+            width:300px;
+            border-color:red;
+            border-radius:15px;
+            margin:100px auto;
+
+        }
+        .btn1{
+        float: right;}
+    </style>
+</head>
+<body>
+<form>
+    <input type="submit" VALUE="HOME"  formaction="{% url 'home' %}" class="btn1">
+    <br>
+    </form>
+
+        <legend>
+    <fieldset>
+
+    <div>
+            <form action="{% url 'welcome' %}" method="POST">
+                {% csrf_token %}
+                    <div id="login">
+                    <table align="center">
+
+                    <tr>
+                    <th>Username</th>
+                    <th><input type="text" name="uname" ></th>
+                    </tr>
+                    <tr>
+                    <th>Password</th>
+                    <th><input type="text" name="psw"></th>
+                    </tr>
+
+                    </table>
+            </div><br>
+
+
+
+                <center><div >&emsp;&emsp;&emsp;<input type="submit" VALUE="login"  align="center" ></center></div>
+                <h4 align="center">New User ? <a href="{% url 'register' %}">Register</a></h4>
+        </form>
+    </div>
+    </fieldset>
+    </legend>
+</body>
+</html>

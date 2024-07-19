@@ -1,0 +1,92 @@
+{% extends 'common.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        fieldset{
+            width:400px;
+            height:500px;
+            border-color:blue;
+            border-radius:15px;
+            margin:100px auto;
+
+        }
+    </style>
+</head>
+<body>
+         <legend class="data">
+        <fieldset >
+
+        <h2>Registration Form</h2>
+  <form  method="POST">
+    {% csrf_token %}
+    <table>
+      <tr>
+        <td>Customer ID:</td>
+        <td><input type="text" name="custid" required></td>
+      </tr>
+      <tr>
+        <td>Username:</td>
+        <td><input type="text" name="username" required></td>
+      </tr>
+      <tr>
+        <td>Password:</td>
+        <td><input type="password" name="password" required></td>
+      </tr>
+      <tr>
+        <td>Confirm Password:</td>
+        <td><input type="password" name="confirm_password" required></td>
+      </tr>
+      <tr>
+        <td>Gender:</td>
+        <td>
+          <input type="radio" name="gender" value="male" required> Male
+          <input type="radio" name="gender" value="female" required> Female
+          <input type="radio" name="gender" value="others" required> Others
+        </td>
+      </tr>
+      <tr>
+        <td>Qualification:</td>
+        <td>
+          <input type="checkbox" name="qualification" value="SSC"> SSC
+          <input type="checkbox" name="qualification" value="Degree"> Degree
+          <input type="checkbox" name="qualification" value="Inter"> Inter
+          <input type="checkbox" name="qualification" value="PG"> PG
+        </td>
+      </tr>
+      <tr>
+        <td>State:</td>
+        <td>
+          <select name="state" required>
+            <option value="TS">Telangana</option>
+            <option value="AP">Andhra Pradesh</option>
+            <option value="UP">Uttar Pradesh</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Email:</td>
+        <td><input type="email" name="email" required></td>
+      </tr>
+      <tr>
+        <td>Phone Number:</td>
+        <td><input type="tel" name="phone" pattern="[0-9]{10}" required></td>
+      </tr>
+      <tr>
+        <td colspan="2" style="text-align: center;">
+          <button type="submit">Submit</button>
+
+        </td>
+      </tr>
+
+    </table>
+
+  </form>
+    </fieldset>
+</legend>
+</body>
+</html>
+{% endblock  %}

@@ -1,0 +1,92 @@
+html {
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: linear-gradient(#57606f, #2f3542);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.registration-box {
+  width: 400px;
+  padding: 40px;
+  background: rgba(0,0,0,.7);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  border-radius: 10px;
+}
+.registration-box h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+.registration-box .user-box {
+  position: relative;
+}
+.registration-box .user-box input[type="text"],
+.registration-box .user-box input[type="email"],
+.registration-box .user-box input[type="tel"],
+.registration-box .user-box select {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+.registration-box .user-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+}
+.registration-box .user-box input:focus ~ label,
+.registration-box .user-box select:focus ~ label,
+.registration-box .user-box input:valid ~ label,
+.registration-box .user-box select:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #03e9f4;
+  font-size: 12px;
+}
+.registration-box .user-box .checkboxes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.registration-box .user-box .checkboxes label {
+  flex: 1;
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 16px;
+  transition: .3s;
+}
+.registration-box .user-box .checkboxes input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.registration-box .user-box .checkboxes input[type="checkbox"]:checked ~ label:before {
+  content: '\2713';
+  color: #03e9f4;
+  position: absolute;
+  left: 0;
+  top: 2px;
+  font-size: 16px;
+}

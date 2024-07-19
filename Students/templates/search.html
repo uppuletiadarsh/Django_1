@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Details</title>
+</head>
+<body>
+    <form action="{% url 'search' %}" method="post">
+        {% csrf_token %}
+        <table align="center">
+            <tr>
+                <th><h3>Enter the Student Hallticket Number :</h3></th>
+                <th><input type="number" name="htno"></th>
+                <th><input type="submit" value="Search"></th>
+            </tr>
+        </table>
+    </form>
+
+    {% if det %}
+    <table border="1" align="center">
+        <thead>
+        <tr>
+                <th>Htno</th>
+                <th>Name</th>
+                <th>Subject 1</th>
+                <th>Subject 2</th>
+                <th>Subject 3</th>
+                <th>Average</th>
+                <th>Total Marks</th>
+                <th>Status</th>
+            </tr></thead>
+        <tbody>
+            {% for student in det %}
+            <tr>
+                 <td>{{ student.Htno }}</td>
+                <td>{{ student.Name }}</td>
+                <td>{{ student.sub1 }}</td>
+                <td>{{ student.sub2 }}</td>
+                <td>{{ student.sub3 }}</td>
+                 <td>{{ student.Avg }}</td>
+                <td>{{ student.total }}</td>
+                 <td>{% if student.Avg >= 40 %}
+                        Pass
+                    {% else %}
+                        Fail
+                    {% endif %}</td>
+            </tr>
+            {% endfor %}
+        </tbody></table>
+        {% if id not in det %}
+    <h1>No Records Found</h1>
+{% elif id == None %}
+    <h1>Enter the Proper Records</h1>
+{% endif %}
+
+</body>
+</html>

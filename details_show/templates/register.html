@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form method="post" action="{% url 'submit' %}">
+    {% csrf_token %}
+    <label for="person_id">Person ID:</label><br>
+    <input type="text" id="person_id" name="person_id" required><br><br>
+
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="age">Age:</label><br>
+    <input type="number" id="age" name="age" required><br><br>
+
+    <label for="gender">Gender:</label><br>
+    <input type="radio" id="male" name="gender" value="male" required>
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="female" required>
+    <label for="female">Female</label><br><br>
+
+    <label for="city">City:</label><br>
+    <input type="text" id="city" name="city" required><br><br>
+
+    <label for="hobbies">Hobbies:</label><br>
+    <input type="checkbox" id="cricket" name="hobbies" value="cricket">
+    <label for="cricket">Cricket</label>
+    <input type="checkbox" id="cooking" name="hobbies" value="cooking">
+    <label for="cooking">Cooking</label>
+    <input type="checkbox" id="reading" name="hobbies" value="reading">
+    <label for="reading">Reading</label><br><br>
+
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>

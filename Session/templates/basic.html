@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        <form action="{% url 'education' %}" method="post">
+            {% csrf_token %}
+            <table>
+                <tr>
+                    <th>Name : </th>
+                    <th><input type="text" name="name"></th>
+                </tr>
+                <tr>
+                    <th>Email : </th>
+                    <th><input type="text" name="email"></th>
+                </tr>
+                <tr>
+                    <th>Father Name : </th>
+                    <th><input type="text" name="fname"></th>
+                </tr>
+                <tr>
+                    <th colspan="2"><input type="submit"></th>
+                </tr>
+            </table>
+        </form>
+</body>
+</html>

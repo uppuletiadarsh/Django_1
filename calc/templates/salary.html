@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="{% url 'salary' %}" method="POST">
+        {% csrf_token %}
+        <h1>Annual Salary :<input type="text" value="{{ asal }}" name="asal"></h1>
+        <input type="submit" value="Calculate">
+        <h1>Monthly Salary :<input type="text" value="{{ msal }}" name="msal"></h1>
+    </form>
+
+</body>
+</html>

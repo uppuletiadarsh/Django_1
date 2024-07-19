@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="{% url 'save' %}" method="post">
+    {% csrf_token %}
+
+        <h4>Id      :<input type="number" name="id"></h4>
+        <h4>Name    :<input type="Text" name="name"></h4>
+        <h4>Dept    :<input type="Text" name="dept"></h4>
+        <input type="submit">
+        <h1>{{ message }}</h1></form>
+</body>
+</html>

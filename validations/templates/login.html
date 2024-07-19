@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script >
+        
+
+    </script>
+</head>
+<body>
+    <legend>
+    <fieldset>
+
+    <div>
+            <form action="valid" method="POST" name="myForm" >
+                {% csrf_token %}
+                    <div id="login">
+                    <table align="center">
+
+                    <tr>
+                    <th>Username</th>
+                    <th><input type="text" name="uname" id="uname"></th>
+                    </tr>
+                    <tr>
+                    <th>Password</th>
+                    <th><input type="text" name="psw" id="psw"></th>
+                    </tr>
+
+                    </table>
+            </div><br>
+
+
+
+                <center><div id="logbtn">&emsp;&emsp;&emsp;<input type="submit" VALUE="fullname"  align="center" onclick='validate()'></center></div>
+        </form>
+        
+    </div>
+    </fieldset>
+    </legend>
+    <center></center>
+</body>
+</html>

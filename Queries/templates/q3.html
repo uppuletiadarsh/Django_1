@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        <form action="{% url 'q3' %}" method="post">
+            {% csrf_token %}
+            Enter The DEPT ID that Can Be Exclude :<input type="number" name="id" required><br>
+            <input type="submit">
+        </form>
+{% if det %}
+
+
+    <table border="1" align="center">
+        <thead>
+            <tr>
+                <th>Employee Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Gender</th>
+                <th>Salary</th>
+                <th>Department ID</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for Employee in det %}
+            <tr>
+                <th>{{ Employee.employee_id }}</th>
+                <th>{{ Employee.name }}</th>
+                <th>{{ Employee.email }}</th>
+                <th>{{ Employee.gender }}</th>
+                <th>{{ Employee.salary }}</th>
+                <th>{{ Employee.department_id }}</th>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+        {% elif id not in det %}
+
+        <h1>No Records Found</h1>
+
+{% endif %}
+
+
+</body>
+</html>

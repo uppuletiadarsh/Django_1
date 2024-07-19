@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="{% url 'message' %}" method="POST" >
+                {% csrf_token %}
+                    <div id="login">
+                    <table align="center">
+
+                    <tr>
+                    <th>Username</th>
+                    <th><input type="text" name="uname" id="uname"></th>
+                    </tr>
+                    <tr>
+                    <th>Password</th>
+                    <th><input type="text" name="psw" id="psw"></th>
+                    </tr>
+
+                    </table>
+            </div><br>
+
+
+
+                <center><div >&emsp;&emsp;&emsp;<input type="submit" VALUE="fullname"  align="center"></center></div>
+        </form>
+
+    </div>
+    </fieldset>
+    </legend>
+
+</body>
+</html>

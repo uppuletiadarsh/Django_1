@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        <table border="2">
+            <thead>
+            <tr>
+                <th>Id </th>
+                <th>Name </th>
+                <th>Dept </th>
+                <th>Delete</th>
+                <th>Update</th>
+            </tr></thead>
+            {% for i in det %}
+            <tr>
+                <th>{{ i.id }}</th>
+                <th>{{ i.name }}</th>
+                <th>{{ i.dept }}</th>
+                <th>
+                    <form action="{% url 'delete' i.id %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit">Delete</button>
+                    </form>
+                </th>
+                <th>
+                    <form action="{% url 'update' i.id %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit">Update</button>
+                    </form>
+                </th>
+
+            </tr>
+            {% endfor %}
+        </table>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="{% url 'search' %}" method="post">
+        {% csrf_token %}
+        <h1 align="center">Enter Emp ID :<input type="number" name="empid"></h1>
+        <h1 align="center"><input type="submit"></h1>
+
+        </form>
+    <h1>{{ message }}</h1>
+<table border="2" align="center">
+    {% for a in emp %}
+    <tr>
+        <th>{{ a.idno   }}</th>
+        <th>{{ a.name   }}</th>
+        <th>{{ a.salary  }}</th>
+        {% endfor %}
+    </tr>
+</table>
+</body>
+</html>

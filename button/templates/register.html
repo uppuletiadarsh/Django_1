@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="{% static 'css/css1.css'%}" rel="stylesheet">
+
+</head>
+<body>
+     <form action="home">
+    <div class="row">
+      <input type="submit" value="home">
+    </div>
+
+  </form>
+    <fieldset>
+        <legend>Register here</legend>
+            <div class="container">
+  <form action="welcome">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">Person Id</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="firstname" placeholder="Person Id">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Person Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="lastname" placeholder="Person Name">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label >Age</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id='age' name="firstname" placeholder="Your Age">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="country">Country</label>
+      </div>
+      <div class="col-75">
+        <select id="country" name="country">
+          <option value="India">India</option>
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label >City Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text"  name="firstname" placeholder="City Name">
+      </div>
+    </div>
+
+    <div class="row">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+        </fieldset>
+
+
+</body>
+</html>
